@@ -1,33 +1,34 @@
 
 public class Main {
     public static void main(String[] args) {
-       System.out.println("Задача 1");
-        int clientOs = 1;
-        if (clientOs == 0) {
+        System.out.println("Задача 1");
+        int clientOs = 0;
+        int iOs = 0;
+        int android = 1;
+        if (clientOs == iOs) {
             System.out.println("Установите версию приложения для iOS по ссылке");
-        }
-        if (clientOs == 1) {
+        } else if (clientOs == android) {
             System.out.println("Установите версию приложения для Android по ссылке");
         }
 
         System.out.println("Задача 2");
-        int year = 2010;
-        if (clientOs == 0 && year >= 2015) {
+        int checkYear = 2010;
+        if (clientOs == iOs && checkYear >= 2015) {
             System.out.println("Установите версию приложения для iOS по ссылке");
-        } else if (clientOs == 0 && year < 2015) {
+        } else if (clientOs == iOs && checkYear < 2015) {
             System.out.println("Установите облегченную версию приложения для iOS по ссылке");
         }
-        if (clientOs == 1 && year >=2015) {
+        if (clientOs == android && checkYear >= 2015) {
             System.out.println("Установите версию приложения для Android по ссылке");
-        } else if (clientOs == 1 && year < 2015)  {
+        } else if (clientOs == android && checkYear < 2015) {
             System.out.println("Установите облегченную версию приложения для Android по ссылке");
         }
 
         System.out.println("Задача 3");
         int leapYear = 2021;
-        if (leapYear % 4 == 0 || leapYear % 400 ==0) {
+        if (leapYear % 4 == 0 && leapYear % 100 != 0 || leapYear % 400 == 0) {
             System.out.println("Этот год високосный");
-        } else if (leapYear % 100 != 0 ) {
+        } else {
             System.out.println("Год не високосный");
         }
 
@@ -35,12 +36,12 @@ public class Main {
         int deliveryDistance = 95;
         int time = 1;
         if (deliveryDistance <= 20) {
-            System.out.println("Срок доставки " + time+ " день");
-        } else if(deliveryDistance >20 &&  deliveryDistance < 60) {
-            System.out.println("Срок доставки " + (time+1) + " дня");
-        } else if(deliveryDistance >= 60 && deliveryDistance < 100) {
-            System.out.println("Срок доставки " + (time+2) + " дня");
-        } else if(deliveryDistance >=100) {
+            System.out.println("Срок доставки " + time + " день");
+        } else if (deliveryDistance > 20 && deliveryDistance < 60) {
+            System.out.println("Срок доставки " + (time + 1) + " дня");
+        } else if (deliveryDistance >= 60 && deliveryDistance < 100) {
+            System.out.println("Срок доставки " + (time + 2) + " дня");
+        } else if (deliveryDistance >= 100) {
             System.out.println("Доставки нет");
         }
 
