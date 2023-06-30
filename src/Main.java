@@ -12,15 +12,16 @@ public class Main {
         }
 
         System.out.println("Задача 2");
-        int checkYear = 2010;
-        if (clientOs == iOs && checkYear >= 2015) {
+        int checkYear = 2015;
+        int clientYear = 2010;
+        if (clientOs == iOs && clientYear >= checkYear) {
             System.out.println("Установите версию приложения для iOS по ссылке");
-        } else if (clientOs == iOs && checkYear < 2015) {
+        } else if (clientOs == iOs && clientYear < checkYear) {
             System.out.println("Установите облегченную версию приложения для iOS по ссылке");
         }
-        if (clientOs == android && checkYear >= 2015) {
+        if (clientOs == android && clientYear >= checkYear) {
             System.out.println("Установите версию приложения для Android по ссылке");
-        } else if (clientOs == android && checkYear < 2015) {
+        } else if (clientOs == android && clientYear < checkYear) {
             System.out.println("Установите облегченную версию приложения для Android по ссылке");
         }
 
